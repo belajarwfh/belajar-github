@@ -64,3 +64,66 @@ Artinya setiap commit sebaiknya hanya berisi **satu tujuan perubahan**.
 [optional body]
 
 [optional footer(s)]
+```
+
+
+# Commit dengan Scope
+
+## Apa itu Scope?
+Scope adalah bagian opsional di dalam pesan commit yang menjelaskan **bagian atau konteks spesifik** dari perubahan.  
+Biasanya ditulis di dalam tanda kurung setelah `type`.
+
+**Struktur umum:**
+```
+
+<type>(<scope>): <summary>
+
+```
+
+## Kenapa Menggunakan Scope?
+- Memberikan konteks tambahan di commit message.  
+- Mempermudah pembacaan riwayat commit, terutama di repo besar.  
+- Membantu tim cepat tahu bagian mana yang terpengaruh.
+
+## Contoh Penggunaan Scope
+
+### Dokumentasi
+```
+
+docs(git): catatan best practice commit github
+docs(branch): tambahkan catatan tentang git merge vs rebase
+
+```
+
+### Fitur
+```
+
+feat(auth): implementasi login dengan JWT
+feat(ui): tambah dark mode di halaman dashboard
+
+```
+
+### Perbaikan Bug
+```
+
+fix(api): perbaiki error 500 saat create user
+fix(ui): atasi layout rusak di mobile
+
+```
+
+### Refactor
+```
+
+refactor(service): sederhanakan fungsi getUserData
+
+```
+
+---
+
+## Tips Praktis
+1. Scope boleh **singkat** (misalnya `git`, `ui`, `api`), jangan terlalu panjang.  
+2. Gunakan scope kalau perubahan hanya berhubungan dengan **satu area khusus**.  
+3. Kalau perubahan bersifat umum, scope bisa dikosongkan.  
+
+---
+```
