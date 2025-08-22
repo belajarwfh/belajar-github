@@ -126,4 +126,64 @@ refactor(service): sederhanakan fungsi getUserData
 3. Kalau perubahan bersifat umum, scope bisa dikosongkan.  
 
 ---
+
+# Bagian Body dan Footer pada Commit
+
+## Body (Pesan Tambahan)
+Body digunakan untuk memberikan **penjelasan lebih detail** tentang perubahan.  
+Biasanya dipakai kalau ringkasan (summary) di baris pertama tidak cukup menjelaskan.  
+
+### Aturan Body
+- Pisahkan dengan **satu baris kosong** setelah summary.  
+- Gunakan kalimat singkat dan jelas, maksimal 72 karakter per baris.  
+- Bisa berupa poin-poin atau paragraf.  
+- Jelaskan **alasan perubahan**, bukan hanya apa yang diubah.
+
+### Contoh Commit dengan Body
+```
+
+feat(auth): tambahkan login dengan JWT
+
+* implement JWT untuk proteksi route
+* simpan token di HttpOnly cookie
+* update user model untuk blacklist token
+
+```
+
+---
+
+## Footer (Informasi Tambahan)
+Footer biasanya dipakai untuk metadata atau informasi tambahan, misalnya:  
+- **Referensi issue/PR**: menutup atau menghubungkan ke issue tertentu.  
+- **Breaking change**: menandai perubahan besar yang tidak kompatibel.  
+
+### Contoh Footer
+```
+
+fix(api): perbaiki error 500 saat create user
+
+Root cause: validasi input tidak sesuai schema
+
+Closes #42
+
+```
+
+Contoh dengan **breaking change**:
+```
+
+feat(core): ubah struktur konfigurasi database
+
+BREAKING CHANGE:
+Opsi `db_url` diganti menjadi `database_url` di config.json
+
+```
+
+---
+
+## Ringkasan
+- **Summary** → baris pertama, ringkas & jelas.  
+- **Body** → detail tambahan, alasan, atau langkah-langkah.  
+- **Footer** → metadata (issue, breaking changes, referensi).  
+
+Dengan struktur ini, commit lebih mudah dipahami dan dikelola.
 ```
