@@ -186,4 +186,3 @@ Opsi `db_url` diganti menjadi `database_url` di config.json
 - **Footer** → metadata (issue, breaking changes, referensi).  
 
 Dengan struktur ini, commit lebih mudah dipahami dan dikelola.
-```
